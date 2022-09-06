@@ -29,7 +29,7 @@
     display: flex;
     flex-direction: column;
 
-    padding: 140px 0px 100px 120px; 
+    padding: 140px 0px 100px 240px; 
 }
 
 .titulo{
@@ -38,7 +38,8 @@
     font-weight: 400;
     font-size: 36px;
     
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
     margin-bottom: 10px;
 }
 
@@ -48,7 +49,8 @@
     font-weight: 400;
     font-size: 19px;   
 
-    width: 380px;
+    width: 100%;
+    max-width: 380px;
     margin-bottom: 40px;
 }
 
@@ -75,19 +77,20 @@
 }
 
 .imagem {
-    width: 500px;
+    width: 100%;
+    max-width: 500px;
     height: 500px;
-    margin-right: 350px;
+    margin-right: 240px;
 }
 
-.container-container{
+.principal{
+    background-color: #f9f9f9;
     display: flex;
     justify-content: center;
-    background-color: #f9f9f9;
 }
 
 .container{
-    width: 90%;
+    width: 80vw;
 }
 
 .cartoes{
@@ -96,11 +99,10 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-
 }
 
 .card{
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     display:flex;
     flex-direction: column;
     
@@ -130,49 +132,37 @@
     width: 300px;
 }
 
-.card-cor1{
-    background-color: #FF6363;
+.card-cor1, .card-cor2, .card-cor3, .card-cor4, .card-cor5, .card-cor6{
     width: 100%;
     height: 50%;
     border-radius: 2%;
+}
+
+.card-cor1{
+    background-color: #FF6363;
 }
 
 .card-cor2{
     background-color: #63ECFF;
-    width: 100%;
-    height: 50%;
-    border-radius: 2%;
 }
 
 .card-cor3{
     background-color: #F363FF;
-    width: 100%;
-    height: 50%;
-    border-radius: 2%;
 }
 
 .card-cor4{
     background-color: #63FF73;;
-    width: 100%;
-    height: 50%;
-    border-radius: 2%;
 }
 
 .card-cor5{
     background-color: #FFDD63;
-    width: 100%;
-    height: 50%;
-    border-radius: 2%;
 }
 
 .card-cor6{
     background-color: #6663FF;
-    width: 100%;
-    height: 50%;
-    border-radius: 2%;
 }
 
-footer{
+.rodape{
     background-color: var(--background-Cabecalho-Rodape);
     display: flex;
     flex-direction: column;
@@ -197,7 +187,7 @@ footer{
 .campo input, textarea{
     width: 400px;
     height: 50px;
-    border-radius: 2%;
+    border-radius: 5px;
     border-style: none;
     outline: none;
 }
@@ -235,30 +225,39 @@ input[type=text], [type=email],[type=tel], textarea[type=text]{
     color: black;
 }
 
-@media (max-width: 1100px) {
-    .cabecalho-esquerda{
-        padding-left: 70px;
+@media (max-width: 1380px) {
+    .imagem{
+       margin-right: 75px;
     }
 
+    .cabecalho-esquerda{
+        padding-left: 75px;
+    }
+}
+
+@media (max-width: 1100px) {
     .imagem{
-        width: 400px;
+        max-width: 400px;
         height: 400px;
-        margin: 40px 100px 0px 0px;
+        margin: 40px 68px 0px 0px;
+    }
+    .cabecalho-esquerda{
+        padding-left: 68px;
     }
 }
 
 @media (max-width: 920px) {
-    .cabecalho {
-        flex-direction: column;
-        align-items: center;
+    .imagem{
+        margin: 40px 10px 20px 10px;
     }
 
     .cabecalho-esquerda{
         padding: 50px 10px 0px 10px;
     }
 
-    .imagem{
-        margin: 40px 10px 20px 10px;
+    .cabecalho {
+        flex-direction: column;
+        align-items: center;
     }
 
     .cartoes{
@@ -268,5 +267,61 @@ input[type=text], [type=email],[type=tel], textarea[type=text]{
     .rodape-titulo{
         padding-top: 7%;
         padding-bottom: 4%;
+    }
+}
+
+@media (max-width: 520px) {
+    .imagem{
+        max-width: 300px;
+        height: 300px;
+    }
+
+    .titulo{
+        max-width: 350px;
+        font-size: 30px;
+    }
+
+    .descricao{
+        max-width: 320px;
+        font-size: 16px;
+    }
+
+    .cabecalho-esquerda{
+        width: 300px;
+        padding: 50px 0px 0px 0px;
+    }
+    
+    .container{
+        width: 100%;
+    }
+    
+    .cartoes{
+        justify-content: center;
+        padding: 50px 0px 100px 0px;
+
+    }
+    
+    .card{
+        width: 306px;
+        height: 380.9px;
+    }
+
+    .formulario {
+        padding: 0px 10px 0px 10px;
+    }
+
+    .campo input, textarea{
+        width: 320px;
+    }
+    
+    textarea {
+        height: 300px;
+        resize: none;
+        padding-top: 14px;
+        color: black;
+    }
+    
+    .botao-rodape{
+        width: 320px;
     }
 }
